@@ -1,0 +1,46 @@
+.navbar{
+    padding-top: 30px;
+    height: 170px;
+    background-color: cornflowerblue;
+    margin-bottom: 50px;
+}
+
+.navbar div:first-child{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 25px auto;
+}
+
+.navbar p button{
+    padding: 0.5em 1em;
+}
+
+.navbar p a, .navbar p button:last-child{
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navbar div:last-child ul{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.navbar div:last-child ul li{
+    list-style-type: none;
+    padding: 10px 20px;
+    justify-content: center;
+}
+
+.navbar div:last-child ul li:hover{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.navbar p a{
+    color: white;
+}

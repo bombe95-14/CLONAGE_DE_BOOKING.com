@@ -1,0 +1,7 @@
+.search form{
+    
+    border: 5px solid rgb(230, 195, 18);
+    width: 80%; margin: auto;  margin-top: 50px;
+    display: flex;
+    align-items: center;
+}

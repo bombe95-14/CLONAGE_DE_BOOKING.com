@@ -1,0 +1,46 @@
+.bod{
+    width: 90%;
+    margin: 25px auto;
+    border: 5px solid red;
+    padding: 5px;
+}
+
+.bod #kamer .navigue{
+     font-size: 25px;
+     font-weight: bold; 
+     color: black;
+    width: 35px; height: 26px;
+    border-radius: 13px/13px;
+/*     border-radius: 3em/3em;*/
+     border: 2px solid red;
+     text-align: center;
+}
+
+#kamer>div{
+display: flex;
+justify-content: space-between;
+}
+
+#kamer>div>div{
+    display: flex;
+    justify-content: space-around;
+}
+    
+#region{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 5px solid blue;
+
+}
+
+#site{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border: 5px solid rgb(200, 241, 20);
+}
+
+#region div, #site div{
+    margin-bottom: 25px;
+}

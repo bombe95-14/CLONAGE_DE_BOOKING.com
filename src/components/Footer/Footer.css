@@ -1,0 +1,32 @@
+#footer{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 85%;
+    background-color: aquamarine;
+    font-size: 1.5em;
+    margin: 25px auto;
+    padding: 2em;
+    column-gap: 10px;
+    z-index: 5;
+ }
+
+ #footer li{
+      list-style-type: none;
+ }
+
+ #footer li a{ 
+     text-decoration: none;
+ }
+
+#footer1 #foot1{
+    width: 85%;
+    display: grid;
+    margin: 0% auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    padding: 20px;
+}
+
+*{
+    margin: 0%; padding: 0%;
+}
