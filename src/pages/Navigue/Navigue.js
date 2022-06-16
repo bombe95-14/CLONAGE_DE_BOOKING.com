@@ -21,7 +21,7 @@ export default function Navigue() {    const span_marsk=true
   return (
     <div className='navigue'>
            <div className='navig_gauch'> 
-                      <div> <span> CL </span> <div> <p>Codinglab</p> <p>Web developper</p> </div>    <button onClick={ handleClick } style={{ textAlign : 'center', padding : ' 5px 10px', backgroundColor : 'blue', borderRadius : '20px/20px'  }} > > </button> </div>
+                      <div> <span> CL </span> <div> <p>Codinglab</p> <p>Web developper</p> </div>    <button onClick={ handleClick } style={{ textAlign : 'center', padding : ' 5px 10px', backgroundColor : 'blue', borderRadius : '20px/20px'  }} > &gt; </button> </div>
                       
                       <ul>
                            <li> <BsBootstrapReboot /> <span> <input type="search" placeholder='SEARCH ...' size='20' style={{ padding : '5px' }} /> </span> </li>

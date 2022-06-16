@@ -15,6 +15,39 @@ import kamer6 from "../../assets/kamer/edea.jpg";
 import kamer7 from "../../assets/kamer/foumban.jpg";
 import kamer8 from "../../assets/kamer/garoua.jpg";
 
+import kome from "../../assets/book/comme1.PNG";
+import kome2 from "../../assets/book/comme2.PNG";
+import kome3 from "../../assets/book/comme3.PNG";
+import kome4 from "../../assets/book/comme4.PNG";
+import kome5 from "../../assets/book/comme5.PNG";
+import kome6 from "../../assets/book/972064.jpg";
+import kome7 from "../../assets/book/71365537.jpg";
+import kome8 from "../../assets/book/72203688.jpg";
+import kome9 from "../../assets/book/72203757.jpg";
+import kome10 from "../../assets/book/72203920.jpg";
+
+import h from "../../assets/book/heberge.jpg";
+import h1 from "../../assets/book/heberge1.jpg";
+import h2 from "../../assets/book/heberge2.jpg";
+import h3 from "../../assets/book/heberge3.jpg";
+import h4 from "../../assets/book/heberge4.jpg";
+//import h5 from "../../assets/book/heberge5.jpg";
+import h6 from "../../assets/book/heberge6.jpg";
+import h7 from "../../assets/book/heberge7.jpg";
+import h8 from "../../assets/book/heberge8.jpg";
+import h9 from "../../assets/book/heberge9.jpg";
+import h10 from "../../assets/book/heberge10.jpg";
+import h11 from "../../assets/book/heberge11.jpg";
+import h12 from "../../assets/book/chut.PNG";
+import h13 from "../../assets/book/heberge13.jpg";
+import h14 from "../../assets/book/heberge18.jpg";
+import h15 from "../../assets/book/heberge15.jpg";
+import h16 from "../../assets/book/heberge16.jpg";
+import h17 from "../../assets/book/heberge17.jpg";
+import chat from "../../assets/book/chat.PNG"
+
+
+
 import kamer9 from "../../assets/kamer/montkamer.jpg";
 import kamer10 from "../../assets/kamer/musee_rois.webp";
 import kamer11 from "../../assets/kamer/nord_ouest.jpg";
@@ -74,16 +107,23 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
     interet : [ [ 'Gare du nord', 'Dune de Pyla', 'Port de Marseille', 'Gare de Bruxelle', 'Gare de l\'Est', 'Gare de Saint-Charles', 'Montparnasse', 'Dinesland Paris', 'Gare de Lyon', 'Parc de Beauval', 'Europa -Park',
     'Yasmine Hammanet', 'Paris Port de Versailles', 'Gare de Lyon', 'Parc Asterix' ], 
     [7602,42,1778,1150,7602,1778,7602,7602,1311,89,229,150,7602,7602,4] ] }
+    const locals=['une maison de vacance', 'un appat d\'hotel', 'un cottage', 'un hebergement independant', 'un appartement']
+    let pos_local=0
+    const [local, setLocal] = React.useState(locals[pos_local]);
+    
+
   return (
     <div className="bod">
     
-         
-         
-         <h2> Browse by property type </h2>
-
-          
-
-         <div id='kamer' >
+         <div>
+                <div style={{ margin : '0 auto', }} > <img src={kome} alt="" width='48%' height='375px' /><img src={kome2} alt="" width='52%' height='375px'  /> </div>
+                <div style={{ margin : '0 auto',  }} >
+                          <img src={kome3} alt=""  width='33%' height='350px' /><img src={kome4} alt="" height='350px'  width='34%' /> 
+                          <img src={kome5} alt=""  width='33%' height='350px' />
+                </div>
+         </div>
+  
+         <div id='kamer' > <br/>
                  <h2> Explorez le Cameroon </h2><br/>
                  <p>Ces destination prisées ont beaucoup a offrir</p><br/>
                  <div>
@@ -112,13 +152,107 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
                  </div>
          </div>
 
+         <div id='type_props'>   <br/><br/>
+                 <h2> Browse by property type </h2>
+                 <div> 
+                              <a onClick={handleClick} href="#" style={{ position : 'relative', top : '120px', fontSize : '1.5em' , textDecoration : 'none', color : 'black', backgroundColor : 'white' }} >&lt;</a>     
+                              <div className='type' id='parti_1' > 
+                                     <div> <img src={h1} alt="" width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div> </div>
+                                     <div> <img src={h2} alt=""  width='100%' />  <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                     <div> <img src={h3} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                      <div> <img src={h4} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                              </div>
+
+                              <div className='type'  id='parti_2' style={{ display : 'none' }} > 
+                                                         <div> <img src={h14} alt="" width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div> </div>
+                                                         <div> <img src={h15} alt=""  width='100%' />  <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                         <div> <img src={h16} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                         <div> <img src={h17} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                              </div>
+
+                              <div className='type'  id='parti_3' style={{ display : 'none' }} > 
+                                                         <div> <img src={h} alt="" width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div> </div>
+                                                            <div> <img src={h6} alt=""  width='100%' />  <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                          <div> <img src={h7} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                            <div> <img src={h8} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div> 
+                              </div>
+
+                              <div className='type' style={{ display : 'none' }}  id='parti_4' > 
+                                                         <div> <img src={h9} alt="" width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div> </div>
+                                                            <div> <img src={h10} alt=""  width='100%' />  <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                          <div> <img src={h11} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div>
+                                                            <div> <img src={h13} alt=""  width='100%' /> <div> <h3>Villas</h3> <p>452 884 Villas</p> </div></div> 
+                              </div>
+                              <a onClick={handleClick} href="#" style={{ position : 'relative', left : '99%', bottom : '180px', fontSize : '1.5em' , textDecoration : 'none', color : 'black', backgroundColor : 'white' }} >&gt;</a>     
+                 </div>
+                    
+                 <div className='offre_privi' >
+                         <img src={h12} alt="" />
+                         <div>
+                                <h3> Abonnez vous aux Offres Privillege  </h3><br/>
+                                <p>Vous découvrirez ce que vous économiserez en vous abonnant</p> <br/>
+                                <input type="email" placeholder='Saisissez Votre Email ' name='my_mail' style={{ width : '40%', clear : 'both' }} /> <button> Inscrivez-moi </button>
+                         </div> 
+                 </div>
+
+         </div>     
+
+         <div id='next_trav'>
+                <h2> Trouvés des idées pour votre prochain voyage </h2><br/>
+                <div>
+                    <div className='unun'>
+                       <div className='un' > <img src={kome6} alt="" width='100%' /> 
+                             <div> <h3>Six dont les chansons ont marque l'eurovision</h3> 
+                                   <p> Des voyages inspirées par certains des plus grand tubes pop de vision </p>
+                             </div> 
+                       </div>
+
+                       <div className='un' > 
+                             <img src={kome7} alt="" width='100%' /> 
+                             <div> <h3>Sept d'interet europeen a ne pas manquer</h3> 
+                                    <p> Des voyages inspirées par certains des plus grand tubes pop de vision </p>
+                             </div> 
+                       </div>
+
+                       <div className='un' > 
+                                <img src={kome8} alt="" width='100%' /> 
+                                <div> <h3>Six dont les chansons ont marque l'eurovision</h3> 
+                                       <p> Des voyages inspirées par certains des plus grand tubes pop de vision </p>
+                                </div> 
+                       </div>
+                    </div>   
+
+                    <div className='deuxdeux'>  
+                              <div className='deux'> 
+                                         <img src={kome9} alt="" width='98%' height='400px'/> 
+                                         <div> <h3>Six dont les chansons ont marque l'eurovision</h3> 
+                                               <p> Des voyages inspirées par certains des plus grand tubes pop de vision </p>
+                                         </div> 
+                              </div>
+
+                              <div className='deux'> 
+                                           <img src={kome10} alt="" width='100%' height='400px' /> 
+                                           <div> <h3>Six dont les chansons ont marque l'eurovision</h3> 
+                                                 <p> Des voyages inspirées par certains des plus grand tubes pop de vision </p>
+                                           </div> 
+                              </div>
+                    </div>
+                      
+                </div>
+         </div> 
+          
+         <div className='lechat' >
+                  <div>  <h1> Trouver <br/> {local} <br/> Pour Votre Prochain Sejour </h1> <br/> <button> Decouvrir des Hebergements Independants </button> </div>
+                  <img src={chat} alt="" />
+         </div>     
+
         <div id='love_destin' >
-                <h2> Des destinations qu'on adore </h2>
+                <h2> Des destinations qu'on adore </h2> <br/>
                 <div>
                       <ul>
-                           <li> <a href=""> Region </a> </li>
-                           <li> <a href=""> Ville </a> </li>
-                           <li> <a href="">  Site d'interet </a> </li>
+                           <li className='actif' id='onglet1' > <a href="#"  > Region </a> </li>
+                           <li> <a href="#" id='onglet2' > Ville </a> </li>
+                           <li> <a href="#" id='onglet3' >  Site d'interet </a> </li>
                       </ul>
 
                       <div>  
@@ -126,7 +260,7 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
                                       <Item donne={data.reg} />
                                </div>
 
-                               <div> 
+                               <div id='ville' > 
                                
                                </div>
 

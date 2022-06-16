@@ -1,8 +1,11 @@
 .bod{
     width: 90%;
-    margin: 25px auto;
+    margin: 0px auto;
     border: 5px solid red;
     padding: 5px;
+    margin-top: -150px;
+    z-index: 2;
+    position: static;
 }
 
 .bod #kamer .navigue{
@@ -30,17 +33,114 @@ justify-content: space-between;
     padding-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border: 5px solid blue;
+/*    border: 5px solid blue;*/
 
 }
 
 #site{
     padding-top: 25px;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    border: 5px solid rgb(200, 241, 20);
+/*    border: 5px solid rgb(200, 241, 20);*/
+}
+
+#ville{
+    display: none;
 }
 
 #region div, #site div{
     margin-bottom: 25px;
+}
+
+#love_destin ul{
+       display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 30%;
+}
+
+#love_destin ul .actif{
+       border: 2px solid cornflowerblue;
+       padding: 8px;
+       border-radius: 1.2em;
+       background-color: whitesmoke;
+}
+
+.bod #next_trav .unun{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bod #next_trav .unun .un{
+    position: relative;
+    color: white;
+    width: 33%;
+}
+
+.bod #next_trav .unun .un>div{
+   position: relative;
+   top: -60px;
+}
+
+.bod #next_trav .deuxdeux{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bod #next_trav .deuxdeux .deux{
+    position: relative;
+    width: 50%;
+    color: white;
+}
+
+.bod #next_trav .deuxdeux .deux>div{
+    position: relative;
+    top : -60px;
+}
+
+.bod #type_props>div .type{
+            display: flex;
+            justify-content: space-around;
+            
+}
+
+.bod #type_props>div .type>div{
+    width: 24%;
+}
+
+.offre_privi{
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.offre_privi img{
+    float: left;
+    margin-right: 50px;
+}
+
+.offre_privi button, .offre_privi input{
+    padding: 10px;
+}
+
+.lechat {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     border :rgb(215, 222, 207) .5px solid;
+     margin-bottom: 30px;
+}
+
+.lechat div{
+            width: 35%;
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            padding: 45px;
+            border-radius: 80%/900%;
+}
+
+.lechat button{
+    padding: 10px;
+    width: 70%!important;
 }

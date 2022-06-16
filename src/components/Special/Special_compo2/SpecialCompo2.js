@@ -78,8 +78,8 @@ class SpecialCompo2 extends React.Component{
       }
 
       render(){
-          return <div className="spe_compo">
-          <div> 
+          return <div className="spe_compo" style={{ opacity : this.props.opacite }} >
+          <div style={{ marginBottom : '10px' }} > 
                     <p className='adult'> Adult </p>
                     <p> 
                          <a href='#' onClick={this.handle.bind(this)}> - </a>
@@ -88,7 +88,7 @@ class SpecialCompo2 extends React.Component{
                     </p>
           </div>
 
-    <div>
+    <div style={{ marginBottom : '10px' }} >
          <p> Children </p>
          <p> 
          <a href='#' onClick={this.handle.bind(this)}> - </a>

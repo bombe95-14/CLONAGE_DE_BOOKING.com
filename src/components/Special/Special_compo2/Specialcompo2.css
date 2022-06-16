@@ -1,0 +1,24 @@
+.spe_compo{
+    border: 2px yellow solid;
+    width: 15%;
+    padding: 15px;
+    position: relative;
+    background-color: antiquewhite;
+    left: 60%;
+    bottom: 20px;
+    z-index: 5;
+    
+}
+
+.spe_compo>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.spe_compo p:nth-child(2n){
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    color : rgb(246, 6, 10);
+}

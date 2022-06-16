@@ -73,6 +73,12 @@ export default function Footer () {
                      <li> <a href=""> Safety Ressource center </a> </li>
                      <li> <a href=""> Investor Relations </a> </li>
                      <li> <a href=""> Terms & Conditions </a> </li>
+                     <li> <a href=""> Durabilite </a> </li>
+                     <li> <a href=""> Actualité presse </a> </li>
+                     <li> <a href=""> Reclamation partenaires </a> </li>
+                     <li> <a href=""> Le fonctionnement de notre site </a> </li>
+                     <li> <a href=""> A propos de nos partenaires </a> </li>
+                     <li> <a href=""> Aide sur Booking.com </a> </li>
                </ul>
     </div>
     </React.Fragment>

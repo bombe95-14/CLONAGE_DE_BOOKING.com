@@ -1,8 +1,8 @@
 .navbar{
     padding-top: 30px;
     height: 170px;
-    background-color: cornflowerblue;
-    margin-bottom: 50px;
+    background-color:   #003580;  /* #0071c2  #004cb8;  */
+    color : white;
 }
 
 .navbar div:first-child{
@@ -12,10 +12,16 @@
     align-items: center;
     width: 80%;
     margin: 25px auto;
+    
 }
 
 .navbar p button{
     padding: 0.5em 1em;
+    color : blue
+}
+
+.navbar a{
+    color : white;
 }
 
 .navbar p a, .navbar p button:last-child{
@@ -24,10 +30,11 @@
 }
 
 .navbar div:last-child ul{
-    width: 65%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
-    margin-left: 30px;
+/*    margin-left: 30px;*/
+    margin: 0% auto;
 }
 
 .navbar div:last-child ul li{
@@ -37,7 +44,7 @@
 }
 
 .navbar div:last-child ul li:hover{
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 10px;
 }
 

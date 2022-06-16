@@ -2,19 +2,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 85%;
-    background-color: aquamarine;
+   background-color: whitesmoke;
     font-size: 1.5em;
-    margin: 25px auto;
+    margin: 0px auto;
     padding: 2em;
     column-gap: 10px;
     z-index: 5;
+    position: static;
  }
 
  #footer li{
       list-style-type: none;
  }
 
- #footer li a{ 
+ #footer li a{
+     
      text-decoration: none;
  }
 
@@ -29,4 +31,8 @@
 
 *{
     margin: 0%; padding: 0%;
+}
+
+#footer ul li a:hover{
+     color: red;
 }

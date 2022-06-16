@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div className='navbar' >
           <div>
-                 <h2> lamabooking </h2>
+                 <h2> BOOKING.com </h2>
                  <p>
                       <Link to='/devise'>XAF</Link>
                       <Link to='/add_etab' style={{ border : '2px solid white', padding : '5px' }} >Ajoueter Votre Etablissement</Link>

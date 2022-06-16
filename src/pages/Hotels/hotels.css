@@ -1,7 +1,8 @@
+
 .cote_left{
     background-color: sandybrown;
-    position: fixed;  
-    width: 26%; 
+   
+    width: 28%; 
     z-index: 2;
     margin-left: 6%;
     padding: 15px 0;
@@ -18,6 +19,22 @@
 .cote_left .opt div input{
  font-size: 20px; 
  padding: 4px;
+}
+
+#dessous_left{
+    border: 1px solid grey;
+    width: 28%;
+    padding: 10px 5px;
+    margin-top: 15px;
+    margin-left: 6%;
+}
+
+.filt_pop h3, .budget h3, .etoiles h3, .health h3, .bon_moment h3, .repas h3, .acess_h h3, .quat h3 {
+      padding: 12px 0;
+}
+
+.filt_pop ul li, .budget ul li, .etoiles ul li,.health div, .bon_moment ul li, .repas ul li, .acess_h ul li, .quat ul li {
+    padding-bottom: 8px;
 }
 
 .hotel{
@@ -59,3 +76,48 @@
     width: 23%;
     height: 250px;
 }
+
+#cote_droit #un>div{
+display: flex;
+justify-content: space-between;
+}
+
+#cote_droit #un .ulx {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid blueviolet;
+    }
+
+#active {
+       color: rgb(14, 14, 14)!important;
+        background-color:  rgb(172, 183, 188);
+}
+
+#cote_droit #un ul a{
+        text-decoration: none;
+}
+
+#cote_droit #un .ul2 {
+   width: max-content;
+    align-items: center;
+    border: 2px solid rgb(102, 96, 108);
+    padding: 0 8px;
+    position: relative;
+    left: 71%;
+    opacity: 1;
+}
+
+.ulx li{
+    text-align: center;
+}
+
+#cote_droit #un .ul2 li{
+    
+    margin-top: 10px;
+
+    }
+
+.para a{
+    padding: 13px;
+}    
