@@ -55,7 +55,7 @@ export default function Navbar() {
                           <li> <IoMdAirplane />  <a href="/flight"> FLIGHTS </a> </li>
                           <li> <BiCar /> <a href="/car"> CAR RENTALS </a> </li>
                           <li> <BiBed /> <a href="/attraction"> ATTRACTIONS </a> </li>
-                          <li> <AiOutlineCar />  <a href="/tax_airpot"> AIRPORT TAXI </a> </li>
+                          <li> <AiOutlineCar />  <a href="/tax_airpot"> AIRPORT1 TAXI </a> </li>
                    </ul>
           </div>
     </div>
