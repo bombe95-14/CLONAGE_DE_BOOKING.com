@@ -3,7 +3,8 @@ width: 100%!important;
 }
 
 .before_foot div:first-child{
-    background-color: blue;
+    background-color: #00224f;  
+    color : white;;
     margin: 10px auto;
     width: max-content;
     text-align: center;
@@ -13,7 +14,7 @@ width: 100%!important;
 }
 
 .before_foot div:last-child{
-    background-color: cornflowerblue;
+    background-color: #003580;
     padding: 10px 0;
 }
 

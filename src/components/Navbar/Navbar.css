@@ -6,13 +6,24 @@
 }
 
 .navbar div:first-child{
+    
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 25px auto;
-    
+    margin: 25px auto;  
+}
+
+.navbar .nationalite img{
+    border: .3px whitesmoke solid;
+    border-radius: 42px/40px;
+}
+
+.navbar div:first-child p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar p button{
@@ -20,8 +31,9 @@
     color : blue
 }
 
-.navbar a{
+.navbar ul li a{
     color : white;
+    text-decoration: none;
 }
 
 .navbar p a, .navbar p button:last-child{
@@ -30,11 +42,12 @@
 }
 
 .navbar div:last-child ul{
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 /*    margin-left: 30px;*/
     margin: 0% auto;
+    margin-left: 115px!important;
 }
 
 .navbar div:last-child ul li{
@@ -43,9 +56,9 @@
     justify-content: center;
 }
 
-.navbar div:last-child ul li:hover{
-    border: 2px solid white;
-    border-radius: 10px;
+.navbar div:last-child ul .lien_actif{
+    border: .8px solid whitesmoke;
+    border-radius: 30px;
 }
 
 .navbar p a{

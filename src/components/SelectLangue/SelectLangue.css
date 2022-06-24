@@ -1,0 +1,40 @@
+#lang{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100px;
+    margin: 0 10%;
+    width: 80%;
+    border: 1px solid grey;
+    display: none;
+    
+}
+
+#lang div:first-child{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+}
+
+#lang .ul1, #lang .ul2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
+    margin: auto;
+}
+
+#lang .ul1 li, #lang .ul2 li{
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#lang ul li img{
+    border: .3px whitesmoke solid;
+    border-radius: 42px/40px;
+    margin-right: 15px;
+}
+
+#lang h3{
+    margin-left: 5%;
+}

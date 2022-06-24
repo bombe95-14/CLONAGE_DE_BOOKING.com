@@ -5,3 +5,13 @@
    margin-bottom: 30px!important;
    color : white;
 }
+
+.head p:first-child{
+   font-size: 3em;
+}
+
+.head p:last-child{
+   font-size: 1.3em;
+   padding-top: 10px;
+   padding-bottom: 60px;
+}

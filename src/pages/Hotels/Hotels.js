@@ -2,6 +2,7 @@ import React from 'react'
 
 import './hotels.css'
 import {FiUser} from 'react-icons/fi'
+import { useParams } from 'react-router-dom'
 
 import img_line10 from "../../assets/c3.jpeg";
 import img_line11 from "../../assets/ill.png";
@@ -27,17 +28,13 @@ import ihome_l12 from "../../assets/c12.jpeg";*/
 
 export default function Hotels() {
 
-  const [adult, setAdult] = React.useState(1);
-  const [room, setRoom] = React.useState(0);
-  const [child, setChild] = React.useState(0);
-
-
-       const makala=(e)=>{
-
-       }
-
+  const [adults, setAdults] = React.useState(1);
+  const [rooms, setRooms] = React.useState(0);
+  const [childs, setChilds] = React.useState(0);
+  const {adult, room, destin} = useParams()
 
   return ( <React.Fragment>
+     <mark>  </mark><br/><br/>
     <p className='para' style={{  marginTop: '-30px', marginLeft : '5%' }} >
           <a href="">ACCUEIL</a>   &gt;
           <a href="">Espagne</a>   &gt;
@@ -49,7 +46,7 @@ export default function Hotels() {
           <h3> Search </h3><br/>
           <form> 
           <div> <label> Destination /Nom Etablissement : </label><br/> <input type="text" style={{ width : '70%', fontSize : '1.7em', padding : '5px'}}/> </div><br/>
-          <div style={{  borderRight : '5px solid rgb(230, 195, 18)',  padding : '10px', backgroundColor : 'white', width : '80%' }} onClick={ makala } > <FiUser /> {adult} adult - {room} rooms - {child} children </div>
+          <div style={{  borderRight : '5px solid rgb(230, 195, 18)',  padding : '10px', backgroundColor : 'white', width : '80%' }} onClick={ makala } > <FiUser /> {adults} adult - {rooms} rooms - {childs} children </div>
           <SpecialCompo2 />
           <br/>
           <div style={{  borderRight : '5px solid rgb(230, 195, 18)',  marginTop : '-110px',  marginBottom : '20px'}} >
@@ -181,9 +178,9 @@ export default function Hotels() {
 
     </div>
 
-    <div  style={{  marginTop: '-2600 px' }} id='cote_droit'>
+    <div  style={{ position : 'relative', top : '-2620px' }} id='cote_droit'>
 
-        <div style={{ float : 'right', width : '60%', border : '2px red solid', marginRight : '3%', padding : '10px' }} id='un' >
+        <div style={{ float : 'right', width : '58%' ,border : '2px red solid', marginRight : '3%', padding : '10px' }} id='un' >
           <div>  <h2> Madrid a : 250 etablissements trouvés </h2> <a href="#" style={{textDecoration : 'none', backgroundColor : 'blue', color : 'white', padding : '8px 5px'}} >Regarde la Carte</a> </div>
         
            <div  style={{  margin: '15px 0px', border :'1px solid whitesmoke', padding : '10px' }} >  
@@ -191,21 +188,21 @@ export default function Hotels() {
                   <div  >
                          <h2> Reservez votre sejour aujourd'hui et beneficie d'un taxi aeroport <br/> GRATUIT </h2>
                          <p> Pour les séjours de plus de XAF 360 776 dans les établissements affichant le badge « Taxi aéroport gratuit ».
-                         <a href="#">En savoir plus</a> </p>
+                         <a href="/un">En savoir plus</a> </p>
                   </div>
            </div>
 
            <ul className='ulx'>
-              <li id='active' style={ { borderRight: '2px solid blueviolet' } } > <a href="#"  > Selection pour les longs sejour </a> </li>
-              <li> <a href="#" style={ { borderRight: '2px solid blueviolet' } } > Logements entiers en premier </a> </li>
-              <li> <a href="#" style={ { borderRight: '2px solid blueviolet' } } > Tarif ( le - cher en premier ) </a> </li>
-              <li> <a href="#" style={{ fontSize : '2em' }} > .... </a> </li> 
+              <li id='active' style={ { borderRight: '2px solid blueviolet' } } > <a href="/madrid/sejour_long"  > Selection pour les longs sejour </a> </li>
+              <li style={ { borderRight: '2px solid blueviolet' } } > <a href="/madrid/logement_entier"  > Logements entiers en premier </a> </li>
+              <li style={ { borderRight: '2px solid blueviolet' } } > <a href="/madrid/tarif" > Tarif ( le - cher en premier ) </a> </li>
+              <li> <a href="//" style={{ fontSize : '1em' }} > .... </a> </li> 
            </ul>
 
         <ul className='ul2'>
               <li> Meilleur note et tarif plus bas </li>
-              <li> Etoiles ( par ordre croissanr=t ) </li>
-              <li> Etoiles ( par ordre decroissanr=t )  </li>
+              <li> Etoiles ( par ordre croissanr ) </li>
+              <li> Etoiles ( par ordre decroissanr )  </li>
               <li> nombre d'etoiles et tarif </li>
               <li> Distance du centre ville </li>
               <li> Le plus de commentaire positif </li>
@@ -216,6 +213,46 @@ export default function Hotels() {
         <div style={{ }} >
         <div className='cote_right' >
            <SimpleHotel n_image={img_line10} other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={img_line11} other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={img_line12} other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l1} other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l2}  other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l3}  other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l4}  other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l5}  other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
+        ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
+        'you can cancel later, so lock' ] } />
+
+
+        <SimpleHotel n_image={ihome_l6}  other_value={ [ ['Colton house house', 'Excellent', 8.6], '2km from center', 'Free airport taxi', 
         ['Aueen studio suite', '1 full bed', '$120'], ['includes taxes and fixes', 'Free cancellation'],
         'you can cancel later, so lock' ] } />
 
@@ -297,9 +334,11 @@ function SimpleHotel({ n_image, other_value }) {
            
            <div className='line5'> 
                 <p> { other_value[5] } </p>
-                <button style={{ backgroundColor : 'blue', borderRadius : '5px' , color : 'white', padding : '10px' }} > Voir Disponibilite</button>
+                <a href='/details_hotel' style={{ textDecoration : 'none' ,backgroundColor : 'blue', borderRadius : '5px' , color : 'white', padding : '15px' }} > Voir Disponibilite</a>
            </div>
     </div>
 </div>
   )
 }
+
+const makala = ()=>{}

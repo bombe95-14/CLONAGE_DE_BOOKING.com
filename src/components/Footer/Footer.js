@@ -2,19 +2,12 @@ import React from 'react'
 
 import './Footer.css';
 
-import ihome_l1 from "../../assets/c1.jpeg";
-import ihome_l2 from "../../assets/c2.jpeg";
-import ihome_l3 from "../../assets/c3.jpeg";
-import ihome_l4 from "../../assets/c4.jpeg";
-import ihome_l5 from "../../assets/c5.jpeg";
-import ihome_l6 from "../../assets/c6.jpeg";
-import ihome_l7 from "../../assets/c7.jpeg";
-import ihome_l8 from "../../assets/c8.jpeg";
-import ihome_l9 from "../../assets/co.jpg";
-import ihome_l10 from "../../assets/c10.jpeg";
-import ihome_l11 from "../../assets/c11.jpeg";
-import ihome_l12 from "../../assets/c12.jpeg";
-
+import agoda from '../../assets/other _ien/agoda.png'
+import book from '../../assets/other _ien/booking.png'
+import kayak from '../../assets/other _ien/kayak.png'
+import open from '../../assets/other _ien/open.png'
+import price from '../../assets/other _ien/price.png'
+import rent from '../../assets/other _ien/rental.png'
 
 function HomeLove({ n_image, list_ch }) {
     return (<div className='categorie'>
@@ -81,6 +74,18 @@ export default function Footer () {
                      <li> <a href=""> Aide sur Booking.com </a> </li>
                </ul>
     </div>
+      
+     <p className='first_para' >Booking.com fait partie de Booking Holdings Inc., le leader mondial des voyages en ligne et services associés</p>
+     <br/>
+     <p className='last_para' >
+               <a href="kayak.fr"> <img src={kayak} alt="" /> </a>  
+               <a href="open.com"> <img src={open} alt="" /> </a>  
+               <a href=""> <img src={book} alt="" /> </a>  
+               <a href="rentalsCar.com"> <img src={rent} alt="" /> </a>  
+               <a href="agida.com"> <img src={agoda} alt="" /> </a>  
+               <a href="price.com"> <img src={price} alt="" /> </a>     
+     </p>
+
     </React.Fragment>
     )
 }

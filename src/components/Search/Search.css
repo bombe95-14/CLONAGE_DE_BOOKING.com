@@ -1,7 +1,24 @@
 .search form{
-    
-    border: 5px solid rgb(230, 195, 18);
-    width: 80%; margin: auto;  margin-top: 50px;
+    border: 2px solid rgb(230, 195, 18);
+    width: 76%; margin: auto;  margin-top: 50px;
+    padding: 0px 0;
     display: flex;
     align-items: center;
+    color: gray;
+    background-color: whitesmoke;    
+}
+
+.search form input{
+    border: none;
+}
+
+.search form button{
+    display: block;
+   
+    background-color: aqua;
+}
+
+.pachild{
+    position: relative;
+    top: -85px;
 }

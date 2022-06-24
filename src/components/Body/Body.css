@@ -15,8 +15,10 @@
     width: 35px; height: 26px;
     border-radius: 13px/13px;
 /*     border-radius: 3em/3em;*/
-     border: 2px solid red;
+     border: 2px solid grey;
      text-align: center;
+     position: relative;
+     top: 115px;
 }
 
 #kamer>div{
@@ -26,10 +28,10 @@ justify-content: space-between;
 
 #kamer>div>div{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
     
-#region{
+#oncle1{
     padding-top: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -37,18 +39,49 @@ justify-content: space-between;
 
 }
 
-#site{
+#oncle3{
     padding-top: 25px;
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 /*    border: 5px solid rgb(200, 241, 20);*/
 }
 
-#ville{
+#oncle2{
+/*    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
     display: none;
+/*    justify-content: space-between;*/
+    vertical-align: top;
+    border: 2px green solid;
+    padding: 15px 0;
 }
 
-#region div, #site div{
+#oncle2 a {
+    color: grey;
+    text-decoration: none;
+}
+
+#oncle2 a:hover {
+    text-decoration: underline;
+}
+
+#oncle2 .ville{
+/*    display: flex;
+    flex-direction: column;
+    margin-left: -100px;*/
+    display: block;
+}
+
+#oncle2 .ville li {
+    margin-bottom: 25px;
+}
+
+#oncle2 #parti_1, #oncle2 #parti_2{
+    width: 25%;
+    margin-right: 12px;
+}
+
+#oncle1 div, #oncle3 div{
     margin-bottom: 25px;
 }
 

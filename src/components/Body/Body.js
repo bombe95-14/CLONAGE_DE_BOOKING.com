@@ -1,9 +1,9 @@
-import React, { Children } from 'react'
+import React, { useEffect } from 'react'
 
 import './Body.css'
-import img_line10 from "../../assets/c3.jpeg";
+/*import img_line10 from "../../assets/c3.jpeg";
 import img_line11 from "../../assets/ill.png";
-import img_line12 from "../../assets/ie.png";
+import img_line12 from "../../assets/ie.png";*/
 
 import kamer1 from "../../assets/kamer/bafou.jpg";
 import kamer2 from "../../assets/kamer/buea.jpg";
@@ -53,28 +53,14 @@ import kamer10 from "../../assets/kamer/musee_rois.webp";
 import kamer11 from "../../assets/kamer/nord_ouest.jpg";
 import kamer12 from "../../assets/kamer/yde.jpg";
 
-import ihome_l1 from "../../assets/c1.jpeg";
-import ihome_l2 from "../../assets/c2.jpeg";
-import ihome_l3 from "../../assets/c3.jpeg";
-import ihome_l4 from "../../assets/c4.jpeg";
-import ihome_l5 from "../../assets/c5.jpeg";
-import ihome_l6 from "../../assets/c6.jpeg";
-import ihome_l7 from "../../assets/c7.jpeg";
-import ihome_l8 from "../../assets/c8.jpeg";
-import ihome_l9 from "../../assets/co.jpg";
-import ihome_l10 from "../../assets/c10.jpeg";
-import ihome_l11 from "../../assets/c11.jpeg";
-import ihome_l12 from "../../assets/c12.jpeg";
-
-
-function Logement({ n_image, n_categorie, nbre_cate, children }) {
+/*function Logement({ n_image, n_categorie, nbre_cate, children }) {
   return (<div className='categorie'>
           <img src={n_image} alt="" width='10%' height='250px' /><br/>
             <h3> {n_categorie} </h3>
             <p> { nbre_cate + ' ' + n_categorie } </p>
     </div>
   )
-}
+}*/
 
 function Kamer({ n_image, n_categorie, nbre_cate, children }) {
   return (<div className='cat'>
@@ -86,7 +72,7 @@ function Kamer({ n_image, n_categorie, nbre_cate, children }) {
 }
 
 
-function HomeLove({ n_image, list_ch }) {
+/*function HomeLove({ n_image, list_ch }) {
   return (<div className='categorie'>
           <img src={n_image} alt="" width='285%' height='250px' /><br/>
            <h3> { list_ch[0] } </h3>
@@ -95,11 +81,11 @@ function HomeLove({ n_image, list_ch }) {
            <p> <button style={{ backgroundColor : 'blue', color : 'white', padding : ' 5px ' }}> { list_ch[3] } </button> <span> { list_ch[4] } </span> </p>
     </div>
   )
-}
+}*/
 
 
 
-export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , img_line10 ], [ 'Reno', 533, img_line11 ], [ 'Austin', 532, img_line12 ] ] }
+export default function Body() { //const tab_multi={ line1 : [ [ 'Dublin', 123 , img_line10 ], [ 'Reno', 533, img_line11 ], [ 'Austin', 532, img_line12 ] ] }
   const data={ reg : [[ 'Luberon', 'Belle-Ile-en-Mer', 'Canton du Testin', 'Ile de Ré', 'Gorges du Verdon',
   'Grisons', 'Ile d\'Oleron', 'Lac des Quatre-cantons', 'Bali', 'Koh Samui', 'Province de Phuket', 'Etat de New York',
   'Ile-de-France', 'Zanzibar', 'Lac Leman', 'Bora Bora', 'Corse', 'Tahiti', 'Santorin', 'Bonanjo' ],
@@ -108,9 +94,35 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
     'Yasmine Hammanet', 'Paris Port de Versailles', 'Gare de Lyon', 'Parc Asterix' ], 
     [7602,42,1778,1150,7602,1778,7602,7602,1311,89,229,150,7602,7602,4] ] }
     const locals=['une maison de vacance', 'un appat d\'hotel', 'un cottage', 'un hebergement independant', 'un appartement']
+   
     let pos_local=0
     const [local, setLocal] = React.useState(locals[pos_local]);
     
+    let parti_visib_kamer=1
+    let elt_tab_visib=0
+    useEffect(() => {
+     // let parti_visib_kamer=1
+      setInterval(() => {
+       const visib_curent = parti_visib_kamer
+       parti_visib_kamer++
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+       parti_visib_kamer = parti_visib_kamer<4 ? parti_visib_kamer : 1
+       
+       document.getElementById('parti_' + visib_curent).style.display='none'
+       document.getElementById('parti_' + parti_visib_kamer).style.display='flex'
+
+      }, 7000);
+    }, [ ]);
+
+    useEffect( ()=>{
+            setInterval(() => {
+                elt_tab_visib++
+                // eslint-disable-next-line react-hooks/exhaustive-deps
+                elt_tab_visib = elt_tab_visib<5 ? elt_tab_visib : 0
+                setLocal( locals[elt_tab_visib] )
+            }, 10000);
+    }, []
+    )
 
   return (
     <div className="bod">
@@ -127,7 +139,7 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
                  <h2> Explorez le Cameroon </h2><br/>
                  <p>Ces destination prisées ont beaucoup a offrir</p><br/>
                  <div>
-                 <p className='navigue' style={{ marginRight : '15px' }} >&lt;</p>
+                
                  <div id='parti_1' > 
                        <Kamer n_image={kamer1} n_categorie='Bafoussam' nbre_cate='10' /> 
                        <Kamer n_image={kamer2} n_categorie='Buea' nbre_cate='10' /> 
@@ -148,7 +160,7 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
                        <Kamer n_image={kamer11} n_categorie='NORD OUEST' nbre_cate='10' /> 
                        <Kamer n_image={kamer12} n_categorie='YAOUNDE' nbre_cate='10' /> 
                  </div>
-                 <p className='navigue' >&gt;</p>
+                
                  </div>
          </div>
 
@@ -242,7 +254,11 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
          </div> 
           
          <div className='lechat' >
-                  <div>  <h1> Trouver <br/> {local} <br/> Pour Votre Prochain Sejour </h1> <br/> <button> Decouvrir des Hebergements Independants </button> </div>
+                  <div>  
+                  <h1><pre> Trouver <br/>
+                           {local}  <br/>
+                            pour Votre Prochain Sejour 
+                        </pre></h1> <br/> <button> Decouvrir des Hebergements Independants </button> </div>
                   <img src={chat} alt="" />
          </div>     
 
@@ -250,21 +266,159 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
                 <h2> Des destinations qu'on adore </h2> <br/>
                 <div>
                       <ul>
-                           <li className='actif' id='onglet1' > <a href="#"  > Region </a> </li>
-                           <li> <a href="#" id='onglet2' > Ville </a> </li>
-                           <li> <a href="#" id='onglet3' >  Site d'interet </a> </li>
+                           <li > <a href="#"  className='actif' id='ongle1' onClick={handle2} > Region </a> </li>
+                           <li  > <a href="#" id='ongle2' onClick={handle2} > Ville </a> </li>
+                           <li > <a href="#"  id='ongle3' onClick={handle2} >  Site d'interet </a> </li>
                       </ul>
 
                       <div>  
-                               <div id='region' > 
+                               <div id='oncle1' > 
                                       <Item donne={data.reg} />
                                </div>
 
-                               <div id='ville' > 
-                               
+                               <div id='oncle2' > 
+                                               <div id='parti_1' >       
+                                               <div style={{ marginBotton : '10px' }} >
+                                                         <h3> <a href="">Courbevoie, France </a> </h3>
+                                                         <a href="">41 locations de vacances </a>,
+                                                         <a href=""> 40 appartements </a>,
+                                                         <a href="">10 appart'hôtels </a>
+                                               </div><br/>
+
+                                               <div style={{ marginBotton : '10px' }}>
+                                                         <h3><a href="">Great Yarmouth, Royaume-Uni </a></h3>
+                                                         <a href="">170 locations de vacances </a>,
+                                                        
+                                                         <a href="">70 cottages, 60 villas </a>,
+                                                         <a href="">60 maisons de vacances </a>,
+                                                         <a href="">51 appartements </a>                                                       
+                                               </div>  <br/>
+
+                                               <div style={{ marginBotton : '10px' }}>
+                                                        <h3><a href="">Canton, Chine </a></h3>
+                                                        <a href="">92 locations de vacances </a>,
+                                                        <a href="">92 appartements </a>,
+                                                        <a href="">16 appart'hôtels </a>,
+                                                        <a href=""> 9 auberges de jeunesse </a>                                                    
+                                               </div>
+                                               </div>
+                                               
+                                               <div id='parti_2' >
+                                               <div style={{ marginBotton : '10px' }}>
+                                                         <h3><a href="">Amsterdam, Pays-Bas </a></h3>
+                                                         <a href="">603 locations de vacances </a>,
+                                                         <a href="">306 B&B / chambres d'hôtes </a>,
+                                                         <a href="">211 appartements </a>,
+                                                         <a href="">81 séjours chez l'habitant </a>,
+                                                         <a href="">37 auberges de jeunesse </a>
+                                               </div><br/>
+
+                                               <div style={{ marginBotton : '10px' }}>
+                                                         <h3><a href="">Marseille, France </a></h3>
+                                                         <a href="">1 056 locations de vacances </a>,
+                                                         <a href="">956 appartements </a>,
+                                                         <a href="">53 cottages </a>,
+                                                         <a href="">51 maisons de vacances </a>,
+                                                         <a href="">51 villas </a> 
+                                               </div><br/>
+
+                                               <div style={{ marginBotton : '10px' }}>
+                                                         <h3><a href="">   Lisbonne, Portugal </a></h3>
+                                                         <a href="">3 997 locations de vacances </a>,
+                                                         <a href="">3 560 appartements </a>,
+                                                         <a href="">352 B&B / chambres d'hôtes </a>,
+                                                         <a href="">332 séjours chez l'habitant </a>,
+                                                         <a href="">293 maisons d'hôtes </a> 
+                                               </div>
+                                               </div>
+
+                                              <ul id='parti_3' className='ville' >  
+                                              <li><a href=""> Zermatt <br/> 556 hôtels</a></li>
+                                              <li><a href="">Lucern <br/> 188 hôtels</a></li>
+                                              <li><a href="">Lugano <br/> 236 hôtels</a></li>
+                                              <li><a href="">Lausanne <br/> 89 hôtels</a></li>
+                                              </ul>
+
+                                              <ul id='parti_4' className='ville' >
+                                                       <li><a href=""><span>Interlaken</span> <br/> 228 hôtels </a></li>       
+                                                       <li><a href=""><span> Genève</span> <br/> 247 hôtels </a></li>   
+                                                       <li><a href=""><span>Ostende</span> <br/> 426 hôtels </a></li>   
+                                                       <li><a href=""><span>Bruxelles</span> <br/> 1151 hôtels</a></li>   
+                                              </ul>
+
+                                              <ul id='parti_5'  style={{ display : 'none' }}>
+                                                                  <li><a href=""><span></span> Luxembourg 217 hôtels</a></li>       
+                                                                  <li><a href=""><span></span>Trouville-sur-Mer 227 hôtels</a></li>   
+                                                                  <li><a href=""><span></span>Toulousen1043 hôtels</a></li>   
+                                                                  <li><a href=""><span></span>Strasbourg 675 hôtels</a></li>   
+                                              </ul>
+
+                                              <ul id='parti_6' style={{ display : 'none' }}>
+                                                   <li><a href=""><span></span>Saint-Malo
+                                                   529 hôtels</a></li>       
+                                                   <li><a href=""><span></span></a> Saint-Jean-de-Luz
+                                                   348 hôtels</li>   
+                                                   <li><a href=""><span></span>Les Saintes-Maries-de-la-Mer
+                                                   165 hôtels</a></li>   
+                                                   <li><a href=""><span></span>Royan
+                                                   300 hôtels </a></li>            
+                                               </ul>
+
+
+                                              <ul id='parti_7'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a> Rouen
+                                                      391 hôtels</li>       
+                                                      <li><a href=""><span></span></a>Rennes
+                                                      242 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Porto-Vecchio
+                                                      567 hôtels</li>   
+                                                      <li><a href=""><span></span>Porquerolles
+                                                      23 hôtels </a></li>  
+                                              </ul>  
+
+                                              <ul id='parti_8'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a>Perpignan
+                                                      195 hôtels
+                                                      </li>       
+                                                      <li><a href=""><span></span>Paris
+                                                      7573 hôtels</a></li>   
+                                                      <li><a href=""><span></span></a>Orléans
+                                                      122 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Nice
+                                                      3272 hôtels</li>
+                                              </ul>    
+                                              
+                                              <ul id='parti_9'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a> Nantes 438 hôtels</li>       
+                                                      <li><a href=""><span></span>Montpellier  873 hôtels</a></li>   
+                                                      <li><a href=""><span></span></a>Lyon 1308 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Lille 609 hôtels</li> 
+                                              </ul> 
+
+                                              <ul id='parti_10'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a> Le Touquet-Paris-Plage 141 hôtels</li>       
+                                                      <li><a href=""><span></span></a>Les Sables dʼOlonne 681 hôtels</li>   
+                                                      <li><a href=""><span></span></a>La Rochelle  649 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Honfleur  478 hôtels</li> 
+                                              </ul> 
+
+                                              <ul id='parti_11'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a> Grenoble   197 hôtels</li>       
+                                                      <li><a href=""><span></span></a>Gérardmer 286 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Fontainebleau 65 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Étretat 70 hôtels</li> 
+                                              </ul> 
+
+                                              <ul id='parti_12'style={{ display : 'none' }}>
+                                                      <li><a href=""><span></span></a> La Baule 247 hôtels</li>       
+                                                      <li><a href=""><span></span></a>Deauville 329 hôtels</li>   
+                                                      <li><a href=""><span></span></a>Clermont-Ferrand 131 hôtels</li>   
+                                                      <li><a href=""><span></span>Chartres 100 hôtel</a></li> 
+                                              </ul> 
+
                                </div>
 
-                               <div id='site' > 
+                               <div id='oncle3' > 
                                       <Item donne={data.interet} />
                                </div>
                       </div>
@@ -292,7 +446,6 @@ export default function Body() { const tab_multi={ line1 : [ [ 'Dublin', 123 , i
 
 
 let part_visib=1
-let status_video='play'
 const handleClick=(e)=>{
           const element=e.target  
           const val_click=element.textContent  
@@ -301,14 +454,40 @@ const handleClick=(e)=>{
                   if( val_click==='>' ){
                     console.log('on avance')
                     part_visib++
-                    part_visib = part_visib>3 ? part_visib - 3 : part_visib
+                    part_visib = part_visib>4 ? 1 : part_visib
                   } else{
                                console.log('on rentre')
-                               part_visib--
-                               part_visib = part_visib<1 ? 1 : part_visib
+                               
+                               part_visib = part_visib===1 ? 1 : part_visib-1
                   }
-                  document.getElementById('parti_' + visib_current).style.display='none'
-                  document.getElementById('parti_' + part_visib).style.display='block'
+                  document.querySelector('#type_props #parti_' + visib_current).style.display='none'
+                  document.querySelector('#type_props #parti_' + part_visib).style.display='flex'
                   e.preventDefault()
-          
+                
+}
+
+const handle2=(e)=>{
+         const elt_actif=document.querySelector('.actif')
+         const elt_actual_click=e.target
+
+         let id_elt_visible=elt_actif.id
+         let id_elt_a_affiche=elt_actual_click.id 
+         
+         if(elt_actif.className!==elt_actual_click.className){
+          elt_actif.className=''
+          elt_actual_click.className='actif'
+
+          id_elt_visible=id_elt_visible.replace('g', 'c')
+          id_elt_a_affiche = id_elt_a_affiche.replace('g', 'c')
+
+          console.log( id_elt_a_affiche + '\n' +  id_elt_visible + '\n' )
+
+          document.getElementById(id_elt_visible).style.display='none'
+          if(id_elt_a_affiche==='oncle2'){
+            document.getElementById(id_elt_a_affiche).style.display='flex'
+          }else{
+          document.getElementById(id_elt_a_affiche).style.display='grid'
+          }
+         }
+         e.preventDefault()
 }

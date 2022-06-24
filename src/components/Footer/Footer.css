@@ -36,3 +36,19 @@
 #footer ul li a:hover{
      color: red;
 }
+
+.first_para{
+    padding: 10px;
+    margin: 0px auto;
+    width: 60%;
+}
+
+.last_para{
+    width: 70%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.last_para img{
+    margin-right: 6%;
+}
